@@ -1,0 +1,14 @@
+jobs:
+- name: dadjoke
+  tasks:
+  - tap-pixlet--dadjoke target-tidbyt
+- name: dadjoke--webp
+  tasks:
+  - tap-pixlet--dadjoke target-webp
+
+plugins:
+  extractors:
+  - name: tap-pixlet--dadjoke
+    inherit_from: tap-pixlet
+    config:
+      path: apps/dadjoke
